@@ -1,47 +1,30 @@
 {
-  "name": "@apps/daisy-ui-storybook",
+  "name": "@apps/expo-profile-app",
   "version": "1.0.0",
-  "main": "./src/index.tsx",
-  "types": "./src/index.tsx",
-  "license": "MIT",
   "private": true,
+  "main": "index.js",
   "scripts": {
-    "dev": "storybook dev -p 6006",
-    "build": "storybook build"
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "start-container": "docker compose up -d --build",
+    "stop-container": "docker compose down",
+    "build:apk": "docker compose run --rm eas-builder eas build -p android --profile preview --local --non-interactive --output out/personal-cv.apk"
   },
   "dependencies": {
-    "next": "^16.2.10",
-    "react": "^19.2.7",
-    "react-dom": "^19.2.8"
+    "expo": "^57.0.2",
+    "expo-status-bar": "^57.0.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "react-native": "0.86.0",
+    "react-native-web": "^0.21.2",
+    "react-native-webview": "14.0.1"
   },
   "devDependencies": {
-    "@chromatic-com/storybook": "latest",
-    "@storybook/addon-a11y": "^10.5.10",
-    "@storybook/addon-docs": "^10.5.10",
-    "@storybook/addon-vitest": "^10.5.10",
-    "@storybook/nextjs-vite": "^10.5.10",
-    "@tailwindcss/postcss": "^4.3.3",
-    "@trivago/prettier-plugin-sort-imports": "^6.0.2",
-    "@types/node": "26.2.0",
-    "@types/react": "19.2.18",
-    "@vitest/browser-playwright": "latest",
-    "@vitest/coverage-v8": "latest",
-    "daisyui": "^5.6.16",
-    "playwright": "latest",
-    "prettier": "^3.9.6",
-    "react-icons": "^5.7.0",
-    "react-is": "^19.2.8",
-    "react-toastify": "^11.0.5",
-    "recharts": "^3.9.2",
-    "storybook": "^10.5.10",
-    "tailwind-merge": "^3.4.1",
-    "tailwindcss": "^4.3.2",
-    "typescript": "7.0.2",
-    "vite": "latest",
-    "vitest": "latest"
-  },
-  "exports": {
-    ".": "./src/index.tsx",
-    "./*": "./src/*"
+    "@babel/core": "^8.0.1",
+    "@types/react": "~19.2.4",
+    "expo-dev-client": "~57.0.5",
+    "typescript": "^5.9.3"
   }
 }

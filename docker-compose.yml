@@ -1,0 +1,13 @@
+services:
+  eas-builder:
+    build: .
+    container_name: eas-local-builder
+    working_dir: /app
+    volumes:
+      - .:/app
+      - ~/.eas:/root/.eas
+      - ~/.expo:/root/.expo
+    environment:
+      - EXPO_TOKEN=${EXPO_TOKEN}
+      - EAS_NO_VCS=1
+    tty: true

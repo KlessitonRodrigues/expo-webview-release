@@ -1,0 +1,29 @@
+{
+  "expo": {
+    "name": "personal-cv",
+    "slug": "personal-cv",
+    "version": "1.0.0",
+    "platforms": [
+      "android"
+    ],
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#d9d9d9"
+    },
+    "android": {
+      "package": "com.klessiton.personalcv",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#1f6feb"
+      }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "cdd08edc-0085-4cf1-8a29-fb7e4dc16dda"
+      }
+    },
+    "owner": "klessiton"
+  }
+}
