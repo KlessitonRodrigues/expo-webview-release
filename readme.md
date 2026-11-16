@@ -1,6 +1,24 @@
 # expo-webview-release
 
-Expo app that renders a WebView pointing to `https://google.com`, built into an Android APK inside Docker and emitted to `out/`.
+## Description
+
+Expo (React Native) app that renders a WebView pointing to a configured URL (default `https://google.com`). The TypeScript source is kept minimal — a root App component with config, constants, and WebView helpers — and the Android APK is built with EAS CLI inside a Docker container (Android SDK + EAS CLI image), emitted to `out/personal-cv.apk`.
+
+## Clone as submodule (https)
+
+```bash
+# add this repo as a submodule in a parent project
+git submodule add https://github.com/KlessitonRodrigues/expo-webview-release.git
+
+# commit the submodule reference in the parent repo
+git commit -m "feat: add expo-webview-release submodule"
+
+# clone a parent repo with this submodule included
+git clone --recurse-submodules https://github.com/<parent-owner>/<parent-repo>.git
+
+# or initialize submodules after an existing clone
+git submodule update --init --recursive
+```
 
 ## Structure
 
