@@ -20,6 +20,10 @@ git clone --recurse-submodules https://github.com/<parent-owner>/<parent-repo>.g
 git submodule update --init --recursive
 ```
 
+## Diagram
+
+![Expo WebView App — Runtime & APK Build Flow](./diagram.svg)
+
 ## Structure
 
 ```
